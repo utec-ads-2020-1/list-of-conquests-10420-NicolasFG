@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+N:/Ejercicios_C++/Lista_de_conquistas_UVA/main.cpp
+iostream
+-
+string
+-
+map
+-
+
