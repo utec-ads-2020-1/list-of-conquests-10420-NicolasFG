@@ -4,23 +4,38 @@
 
 using namespace std;
 
-int main() {
 
+unsigned int leer() {
     unsigned int n;
-    string ciudad, nombre;
     cin >> n;
+    return n;
+}
+
+void imprimir( const map<string, int>& conquistas){
+    for(auto & conquista : conquistas) {
+        cout << conquista.first <<" "<< conquista.second << endl;
+    }
+}
+
+
+void maquina() {
+    string ciudad, nombre;
     map <string, int> conquistas;
 
-    while (n--) {
+    auto repeticiones = leer();
+
+    while (repeticiones--) {
         cin >> ciudad;
 
         getline(cin, nombre);
 
         conquistas[ciudad] ++;
     }
+    imprimir(conquistas);
+}
 
-    for(auto & conquista : conquistas) {
-        cout << conquista.first <<" "<< conquista.second << endl;
-    }
+int main() {
+    maquina();
+
     return 0;
 }
